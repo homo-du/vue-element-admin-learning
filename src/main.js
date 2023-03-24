@@ -20,6 +20,10 @@ import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
 
+import highlightPlugin from "@/utils/highlight-vue-plugin";
+import 'highlight.js/styles/base16/atelier-heath-light.css' // 根据需要选择样式文件
+Vue.use(highlightPlugin);
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api

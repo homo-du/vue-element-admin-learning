@@ -27,6 +27,15 @@ import variables from '@/styles/variables.scss'
 export default {
   components: { SidebarItem, Logo },
   computed: {
+    /**
+    mapGetters操作等同于：
+    doneTodosCount() {
+      return this.$store.getters['doneTodosCount']
+    },
+    anotherGetter() {
+      return this.$store.getters['anotherGetter']
+    }
+    */
     ...mapGetters([
       'permission_routes',
       'sidebar'
