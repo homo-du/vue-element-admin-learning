@@ -2,5 +2,7 @@ build/*.js
 src/assets
 public
 dist
+
+# 忽略所有vue js文件的eslint校验
 **/*.vue
 **/*.js

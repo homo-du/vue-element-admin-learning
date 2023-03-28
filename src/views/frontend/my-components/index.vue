@@ -6,12 +6,15 @@
       <el-descriptions-item label="使用方法">
         <highlightjs language="html" :code="component.usage_code"></highlightjs>
       </el-descriptions-item>
-      <el-descriptions-item label="效果"><component :is="component.prop"></component></el-descriptions-item>
+      <el-descriptions-item label="效果">
+        <component :is="component.prop"></component>
+      </el-descriptions-item>
     </el-descriptions>
   </div>
 </template>
 
 <script>
+
 //导入目录下所有符合条件的文件
 const requireComponent = require.context(
   '@/components', // 组件目录的相对路径
@@ -41,6 +44,12 @@ export default {
           label: '自动刷新',
           description: '选择自动刷新时间间隔或手动刷新',
           usage_code: `<auto-refresh :intervalOptions='intervalOptions' @refresh='fetchData' />`,
+        },
+        {
+          prop: 'Empty',
+          label: '空状态',
+          description: '数据为空时展示',
+          usage_code: `<empty :image-size="'50'">`,
         },
       ]
     }
